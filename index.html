@@ -2716,7 +2716,609 @@ a:focus, button:focus, input:focus, textarea:focus {
   line-height: 1.6;
   color: #333;
 }
+/* Revamped About, Clients & Contact Sections */
 
+/* ===== ABOUT SECTION ===== */
+.animated-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    position: relative;
+    display: inline-block;
+    animation: headingGlow 3s infinite alternate;
+}
+
+@keyframes headingGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(100, 181, 246, 0.8), 0 0 25px rgba(100, 181, 246, 0.4);
+    }
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #64b5f6;
+    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+.stat-label {
+    color: rgba(49, 47, 47, 0.9) !important;
+    margin-top: 5px;
+}
+
+.about-image-container {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 21, 40, 0), rgba(30, 136, 229, 0.3));
+    z-index: 3;
+}
+
+.about-image-frame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #64b5f6;
+    border-radius: 10px;
+    z-index: 1;
+    opacity: 0.7;
+    transition: all 0.5s ease;
+}
+
+.about-image-container:hover .about-image-frame {
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+
+.floating-tech-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64b5f6;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(100, 181, 246, 0.5);
+    z-index: 4;
+    animation: floatIcon 5s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+/* ===== CLIENTS SECTION ===== */
+.clients-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.clients-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.client-logo {
+    perspective: 1000px;
+    height: 180px;
+}
+
+.logo-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.client-logo:hover .logo-card {
+    transform: rotateY(180deg);
+}
+
+.logo-front, .logo-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.logo-front {
+    background-color: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(100, 181, 246, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(100, 181, 246, 0.1);
+}
+
+.logo-back {
+    background: linear-gradient(135deg, #1565c0, #64b5f6);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-back h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.logo-back p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.client-logo-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    filter: brightness(1);
+}
+
+.client-logo:hover .client-logo-image {
+    transform: scale(1.1);
+}
+
+.clients-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-counter {
+    text-align: center;
+}
+
+.counter-circle {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 0 auto 15px;
+}
+
+.counter-circle svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progress-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 5;
+}
+
+.progress-fill {
+    fill: none;
+    stroke: url(#gradient);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: progressAnimation 2s ease-out forwards;
+}
+
+@keyframes progressAnimation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.counter-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #64b5f6;
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: rgba(31, 30, 30, 0.9);
+    margin-top: 10px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.particle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 21, 40, 0.5), rgba(30, 136, 229, 0.05));
+    z-index: 0;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 181, 246, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05), 0 0 10px rgba(100, 181, 246, 0.05);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 15px rgba(100, 181, 246, 0.1);
+    border-color: rgba(100, 181, 246, 0.3);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1565c0, #64b5f6);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
+}
+
+.contact-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.contact-details p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64b5f6;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 181, 246, 0.1);
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #1565c0, #64b5f6);
+    color: white;
+    box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.enhanced-form {
+    background-color: rgba(255, 255, 255, 0.02);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 181, 246, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(100, 181, 246, 0.05);
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #64b5f6;
+    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.2);
+}
+
+.form-floating label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-floating .form-control:focus ~ label,
+.form-floating .form-control:not(:placeholder-shown) ~ label {
+    color: #64b5f6;
+    background-color: rgba(10, 21, 40, 0.8);
+}
+
+.btn-glow {
+    background: linear-gradient(45deg, #1565c0, #64b5f6);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(30, 136, 229, 0.4), 0 0 20px rgba(100, 181, 246, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+    z-index: 1;
+}
+
+.btn-glow span, .btn-glow i {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: rotate(30deg) translateX(-300%);
+    }
+    100% {
+        transform: rotate(30deg) translateX(300%);
+    }
+}
+
+.btn-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(30, 136, 229, 0.6), 0 0 30px rgba(100, 181, 246, 0.4);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .about-stats {
+        justify-content: center;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-card {
+        padding: 15px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .contact-details h3 {
+        font-size: 1.1rem;
+    }
+    
+    .enhanced-form {
+        padding: 20px;
+    }
+}
+
+/* Enhanced Animations for Stat Counters */
+
+/* Common animations for both sections */
+@keyframes countUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(100, 181, 246, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(100, 181, 246, 0.7);
+  }
+}
+
+/* Client section stat counters */
+.counter-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e88e5;
+  animation: countUp 1.5s ease-out forwards, pulseGlow 3s infinite;
+}
+
+.counter-label {
+  color: #1a2c4e !important;
+  font-weight: 600;
+  text-shadow: none;
+  margin-top: 5px !important; /* Reduced spacing */
+  animation: countUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* About us section stat counters */
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #64b5f6;
+  text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+  animation: countUp 1.5s ease-out forwards, pulseGlow 3s infinite;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 5px !important; /* Reduced spacing */
+  animation: countUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Make sure counters animate when they come into view */
+.counter-circle svg {
+  transform: rotate(-90deg);
+  animation: fadeIn 1s ease forwards;
+}
+
+.progress-fill {
+  animation: progressAnimation 2s ease-out forwards, pulseStroke 3s infinite 2s;
+}
+
+@keyframes pulseStroke {
+  0%, 100% {
+    stroke-width: 5;
+  }
+  50% {
+    stroke-width: 7;
+  }
+}
+
+/* Add JavaScript-triggered class for counter animation */
+.counter-animated {
+  animation: countUp 1.5s ease-out forwards, pulseGlow 3s infinite;
+}
 
     </style>
 </head>
@@ -3584,25 +4186,52 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
         <!-- About Section -->
-    <section class="section section-light" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-aos="fade-up">About Us</h2>
-                <p data-aos="fade-up" data-aos-delay="100">Uncover the force behind Aiximius, a relentless mission to disrupt and dominate the tech world with hardcore AI-powered innovations.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right" data-aos-delay="200">
-                    <h3>Redefining AI for Business Domination</h3>
-                    <p>Aiximius was born to weaponize artificial intelligence — not just follow trends. We forge game-changing solutions that shatter boundaries across industries. As a next-gen tech force, we fuse bleeding-edge AI research with real-world firepower to obliterate complex business challenges.</p>
-                    <p>Our strike team of AI veterans, machine learning architects, data wizards, and code slingers bring decades of elite experience to the battlefield. We don’t do “one-size-fits-all.” We craft precision-engineered IT arsenals that help our clients outpace, outsmart, and outperform.</p>
-                    <p>At Aiximius, we’re not here to play safe. We believe technology is a weapon for those bold enough to wield it. Innovation, relentless execution, and client victories — that's our code.</p>
+<section class="section section-light" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-aos="fade-up">About Us</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Uncover the force behind Aiximius, a relentless mission to disrupt and dominate the tech world with hardcore AI-powered innovations.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                <h3 class="animated-heading">Redefining AI for Business Domination</h3>
+                <p>Aiximius was born to weaponize artificial intelligence — not just follow trends. We forge game-changing solutions that shatter boundaries across industries. As a next-gen tech force, we fuse bleeding-edge AI research with real-world firepower to obliterate complex business challenges.</p>
+                <p>Our strike team of AI veterans, machine learning architects, data wizards, and code slingers bring decades of elite experience to the battlefield. We don't do "one-size-fits-all." We craft precision-engineered IT arsenals that help our clients outpace, outsmart, and outperform.</p>
+                <p>At Aiximius, we're not here to play safe. We believe technology is a weapon for those bold enough to wield it. Innovation, relentless execution, and client victories — that's our code.</p>
+                <div class="about-stats">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-number"><span class="counter">7</span>+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stat-number"><span class="counter">200</span>+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="stat-number"><span class="counter">150</span>+</div>
+                        <div class="stat-label">Satisfied Clients</div>
+                    </div>
                 </div>
-                <div class="about-image" data-aos="fade-left" data-aos-delay="300">
+            </div>
+            <div class="about-image-container" data-aos="fade-left" data-aos-delay="300">
+                <div class="about-image">
                     <img src="Gemini_Generated_Image_zdiaekzdiaekzdia.jpeg" alt="Aiximius Team">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="about-image-frame"></div>
+                <div class="floating-tech-icon" style="top: 20%; left: -10%;">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="floating-tech-icon" style="top: 70%; right: -10%;">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="floating-tech-icon" style="top: 40%; left: 85%;">
+                    <i class="fas fa-code"></i>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <!-- Services Section -->
     <section class="section section-dark" id="services">
         <div class="container">
@@ -3863,27 +4492,76 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="container">
         <div class="section-title">
             <h2 data-aos="fade-up">Our Clients</h2>
-            <p data-aos="fade-up" data-aos-delay="100">We’ve empowered top-tier companies across industries, revolutionizing their operations and driving unstoppable growth with our game-changing AI solutions.</p>
+            <p data-aos="fade-up" data-aos-delay="100">We've empowered top-tier companies across industries, revolutionizing their operations and driving unstoppable growth with our game-changing AI solutions.</p>
         </div>
-        <div class="clients-logo-grid">
-            <div class="client-logo" data-aos="fade-up" data-aos-delay="100">
-                <img src="rude_light_logo.svg" alt="Client 1 Logo" class="client-logo-image">
+        <div class="clients-showcase">
+            <div class="clients-logo-grid">
+                <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="logo-card">
+                        <div class="logo-front">
+                            <img src="rude_light_logo.svg" alt="Client 1 Logo" class="client-logo-image">
+                        </div>
+                        <div class="logo-back">
+                            <h4>Rude</h4>
+                            <p>Social media platform with 2M+ active users</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="logo-card">
+                        <div class="logo-front">
+                            <img src="merakiel client cropped.svg" alt="Client 2 Logo" class="client-logo-image">
+                        </div>
+                        <div class="logo-back">
+                            <h4>Merakiel</h4>
+                            <p>Handicraft business with global reach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="logo-card">
+                        <div class="logo-front">
+                            <img src="nyaya nexus.svg" alt="Client 3 Logo" class="client-logo-image">
+                        </div>
+                        <div class="logo-back">
+                            <h4>Nyaya Nexus</h4>
+                            <p>Legal firm with 85% case success rate</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="client-logo" data-aos="fade-up" data-aos-delay="200">
-                <img src="merakiel client cropped.svg" alt="Client 2 Logo" class="client-logo-image">
+            <div class="clients-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-counter">
+                    <div class="counter-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="92"></circle>
+                        </svg>
+                        <div class="counter-value"><span class="counter">92</span>%</div>
+                    </div>
+                    <div class="counter-label">Client Retention</div>
+                </div>
+                <div class="stat-counter">
+                    <div class="counter-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="87"></circle>
+                        </svg>
+                        <div class="counter-value"><span class="counter">87</span>%</div>
+                    </div>
+                    <div class="counter-label">Revenue Growth</div>
+                </div>
+                <div class="stat-counter">
+                    <div class="counter-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="95"></circle>
+                        </svg>
+                        <div class="counter-value"><span class="counter">95</span>%</div>
+                    </div>
+                    <div class="counter-label">Client Satisfaction</div>
+                </div>
             </div>
-            <div class="client-logo" data-aos="fade-up" data-aos-delay="300">
-                <img src="nyaya nexus.svg" alt="Client 3 Logo" class="client-logo-image">
-            </div>
-            <!-- <div class="client-logo" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/client4.png" alt="Client 4 Logo" class="client-logo-image">
-            </div>
-            <div class="client-logo" data-aos="fade-up" data-aos-delay="500">
-                <img src="images/client5.png" alt="Client 5 Logo" class="client-logo-image">
-            </div>
-            <div class="client-logo" data-aos="fade-up" data-aos-delay="600">
-                <img src="images/client6.png" alt="Client 6 Logo" class="client-logo-image">
-            </div> -->
         </div>
     </div>
 </section>
@@ -4540,15 +5218,51 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
  <!-- Contact Section -->
-    <section class="section section-light contact-section" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-aos="fade-up">Unleash the Power of Innovation</h2>
-                <p data-aos="fade-up" data-aos-delay="100">
-                Ready to transform your business? Let’s connect and turn your ideas into a dominating force in the market.</p>
+<section class="section section-light contact-section" id="contact">
+    <div class="particle-background"></div>
+    <div class="container">
+        <div class="section-title">
+            <h2 data-aos="fade-up">Unleash the Power of Innovation</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Ready to transform your business? Let's connect and turn your ideas into a dominating force in the market.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Our Location</h3>
+                        <p>New Delhi, India</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone Number</h3>
+                        <p>+91 706 505 1269</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Address</h3>
+                        <p>info@aiximius.com</p>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
-                <form action="https://formspree.io/f/mblopdpl" method="POST" id="contact-form">
+            <div class="contact-form-container" data-aos="fade-left" data-aos-delay="300">
+                <form action="https://formspree.io/f/mblopdpl" method="POST" id="contact-form" class="enhanced-form">
                     <div class="form-group form-floating">
                         <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
                         <label for="name">Your Name</label>
@@ -4559,15 +5273,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         <label for="email">Your Email</label>
                         <div class="input-animation"></div>
                     </div>
-                    <div class="form-group form-floating">
-                        <input type="tel" id="phone" name="phone" class="form-control" placeholder=" ">
-                        <label for="phone">Phone (Optional)</label>
-                        <div class="input-animation"></div>
-                    </div>
-                    <div class="form-group form-floating">
-                        <input type="text" id="phone" name="phone" class="form-control" placeholder=" ">
-                        <label for="phone">Company name (Optional)</label>
-                        <div class="input-animation"></div>
+                    <div class="form-row">
+                        <div class="form-group form-floating">
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder=" ">
+                            <label for="phone">Phone (Optional)</label>
+                            <div class="input-animation"></div>
+                        </div>
+                        <div class="form-group form-floating">
+                            <input type="text" id="company" name="company" class="form-control" placeholder=" ">
+                            <label for="company">Company (Optional)</label>
+                            <div class="input-animation"></div>
+                        </div>
                     </div>
                     <div class="form-group form-floating">
                         <input type="text" id="subject" name="subject" class="form-control" placeholder=" " required>
@@ -4580,7 +5296,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="input-animation"></div>
                     </div>
                     <div class="form-submit">
-                        <button type="submit" class="btn" id="submit-btn">
+                        <button type="submit" class="btn btn-glow" id="submit-btn">
                             <span>Level Me Up</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -4588,7 +5304,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+
 <!-- Footer -->
     <footer>
         <div class="container">
@@ -4799,5 +5523,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
     </script>
+    <script>
+// Animated counters for both about section and client section
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to animate counters
+  function animateCounter(counter, end, duration = 2000) {
+    let start = 0;
+    const increment = end / (duration / 16);
+    const timer = setInterval(function() {
+      start += increment;
+      counter.textContent = Math.floor(start);
+      if (start >= end) {
+        counter.textContent = end;
+        clearInterval(timer);
+      }
+    }, 16);
+  }
+  
+  // Initialize intersection observer for animation when in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('.counter');
+        counters.forEach(counter => {
+          const end = parseInt(counter.getAttribute('data-count') || counter.textContent);
+          counter.textContent = '0';
+          animateCounter(counter, end);
+          counter.classList.add('counter-animated');
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  // Observe stat sections
+  const statSections = document.querySelectorAll('.about-stats, .clients-stats');
+  statSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
 </body>
 </html>
