@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
 <!-- Essential Meta -->
 <title>Aiximius | The Primordial AI for Custom Business Automation & Insights</title>
 <meta name="description" content="Aiximius empowers businesses with cutting-edge AI solutions for automation, insights, and growth. Experience intelligent systems designed for real-world impact.">
@@ -56,6 +57,7 @@
     <title>Aiximius | The Primordial AI for Custom Business Automation & Insights</title>
     <link rel="icon" type="image/png" href="logo-removebg-preview cropped favicon.png">
     <!-- Enhanced with more modern libraries -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -3174,6 +3176,8 @@ a:focus, button:focus, input:focus, textarea:focus {
     box-shadow: 0 8px 25px rgba(30, 136, 229, 0.6), 0 0 30px rgba(100, 181, 246, 0.4);
 }
 
+
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .about-stats {
@@ -5095,22 +5099,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
             <div class="client-logo more-clients" data-aos="zoom-in" data-aos-delay="400">
-    <div class="logo-card">
-        <div class="logo-front more-clients-front">
-            <div class="more-clients-text">And Many More...</div>
-        </div>
-        <div class="logo-back">
-            <h4>See Our Full Client List</h4>
-            <p>Click to view all our prestigious partners</p>
-        </div>
-    </div>
-</div>
+                <div class="logo-card">
+                    <div class="logo-front more-clients-front">
+                        <div class="more-clients-text">And Many More...</div>
+                    </div>
+                    <div class="logo-back">
+                        <h4>See Our Full Client List</h4>
+                        <p>Click to view all our prestigious partners</p>
+                    </div>
+                </div>
+            </div>
             <div class="clients-stats" data-aos="fade-up" data-aos-delay="400">
                 <div class="stat-counter">
                     <div class="counter-circle">
                         <svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#64b5f6" />
+                                    <stop offset="100%" stop-color="#1e88e5" />
+                                </linearGradient>
+                            </defs>
                             <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="92"></circle>
+                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="92" stroke="url(#gradient1)"></circle>
                         </svg>
                         <div class="counter-value"><span class="counter">92</span>%</div>
                     </div>
@@ -5119,8 +5129,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="stat-counter">
                     <div class="counter-circle">
                         <svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#64b5f6" />
+                                    <stop offset="100%" stop-color="#1e88e5" />
+                                </linearGradient>
+                            </defs>
                             <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="87"></circle>
+                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="87" stroke="url(#gradient2)"></circle>
                         </svg>
                         <div class="counter-value"><span class="counter">87</span>%</div>
                     </div>
@@ -5129,8 +5145,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="stat-counter">
                     <div class="counter-circle">
                         <svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#64b5f6" />
+                                    <stop offset="100%" stop-color="#1e88e5" />
+                                </linearGradient>
+                            </defs>
                             <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="95"></circle>
+                            <circle class="progress-fill" cx="50" cy="50" r="45" data-percent="95" stroke="url(#gradient3)"></circle>
                         </svg>
                         <div class="counter-value"><span class="counter">95</span>%</div>
                     </div>
@@ -5140,6 +5162,119 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+
+<style>
+/* Client Stats Section Styles */
+.clients-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.stat-counter {
+    text-align: center;
+    background: rgba(100, 181, 246, 0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px 35px;
+    border: 1px solid rgba(100, 181, 246, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 170px;
+}
+
+.stat-counter:hover {
+    transform: translateY(-10px);
+    background: rgba(100, 181, 246, 0.25);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(100, 181, 246, 0.3);
+}
+
+.counter-circle {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 0 auto 15px;
+}
+
+.counter-circle svg {
+    transform: rotate(-90deg);
+}
+
+.progress-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 5;
+}
+
+.progress-fill {
+    fill: none;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: progressAnimation 2s ease-out forwards;
+}
+
+.counter-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #64b5f6;
+    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: #1a2c4e !important;
+    font-weight: 600;
+    margin-top: 10px !important;
+}
+
+/* And Many More Card Styles */
+.more-clients-front {
+    background: rgba(30, 136, 229, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(30, 136, 229, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.more-clients-text {
+    font-size: 1.5rem;
+    color: #64b5f6;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    animation: pulsateText 2s infinite alternate;
+}
+
+.more-clients:hover .more-clients-front {
+    background: rgba(30, 136, 229, 0.3);
+    border-color: rgba(100, 181, 246, 0.5);
+}
+
+@keyframes progressAnimation {
+    to {
+        stroke-dashoffset: calc(283 - (283 * var(--percent)) / 100);
+    }
+}
+
+@keyframes pulsateText {
+    0% { opacity: 0.8; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1.05); }
+}
+</style>
 
 
 <!-- Testimonials Section -->
@@ -5859,10 +5994,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <div class="contact-social">
-                    <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/aiximius/" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    
+  <a href="https://wa.me/918448217769" class="social-btn" title="WhatsApp" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+                    <!-- <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a> -->
                 </div>
             </div>
             <div class="contact-form-container" data-aos="fade-left" data-aos-delay="300">
@@ -5925,10 +6065,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="#" class="footer-logo">Aiximius</a>
                     <p>A cutting-edge AI powerhouse, delivering disruptive solutions and custom IT services that propel businesses to dominate in the digital age.</p>
                     <ul class="footer-social">
-                        <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <!-- <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li> -->
+                        <li><a href="https://www.linkedin.com/company/aiximius/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li>
+  <a href="https://wa.me/918448217769" class="social-btn" title="WhatsApp" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</li>
+
+                        <!-- <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li> -->
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -6394,11 +6540,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>VitalHealth Analytics</h4>
                     <p>Health monitoring platform</p>
                 </div>
-                <div class="full-client-item">
+                <!-- <div class="full-client-item">
                     <div class="client-placeholder"><i class="fas fa-brain"></i></div>
                     <h4>CogniLearn</h4>
                     <p>Cognitive learning solutions</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
