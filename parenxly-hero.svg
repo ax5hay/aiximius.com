@@ -1,0 +1,70 @@
+<svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#1f1f1f"/>
+  
+  <!-- Central circular progress indicator -->
+  <g transform="translate(150, 200)">
+    <!-- Outer progress ring -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Progress arc (75% complete) -->
+    <path d="M 0,-70 A 70,70 0 1,1 49.5,49.5" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/>
+    
+    <!-- Center symbol - abstract parent and child silhouettes -->
+    <g transform="scale(0.8)">
+      <!-- Adult figure -->
+      <circle cx="-8" cy="-5" r="6" fill="white"/>
+      <path d="M -8,2 L -8,25 M -8,10 L -18,18 M -8,10 L 2,18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      
+      <!-- Child figure (smaller) -->
+      <circle cx="12" cy="0" r="4.5" fill="white"/>
+      <path d="M 12,5 L 12,20 M 12,11 L 6,16 M 12,11 L 18,16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Floating data points/metrics around the circle -->
+  <!-- Top left -->
+  <g transform="translate(60, 80)">
+    <circle cx="0" cy="0" r="3" fill="white"/>
+    <line x1="0" y1="0" x2="0" y2="15" stroke="white" stroke-width="1" opacity="0.6"/>
+    <rect x="-8" y="18" width="16" height="3" rx="1.5" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Top right -->
+  <g transform="translate(240, 90)">
+    <circle cx="0" cy="0" r="3" fill="white"/>
+    <line x1="0" y1="0" x2="0" y2="12" stroke="white" stroke-width="1" opacity="0.6"/>
+    <rect x="-10" y="15" width="20" height="3" rx="1.5" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Bottom left -->
+  <g transform="translate(50, 310)">
+    <circle cx="0" cy="0" r="3" fill="white"/>
+    <line x1="0" y1="0" x2="0" y2="-18" stroke="white" stroke-width="1" opacity="0.6"/>
+    <rect x="-12" y="-24" width="24" height="3" rx="1.5" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Bottom right -->
+  <g transform="translate(250, 320)">
+    <circle cx="0" cy="0" r="3" fill="white"/>
+    <line x1="0" y1="0" x2="0" y2="-15" stroke="white" stroke-width="1" opacity="0.6"/>
+    <rect x="-9" y="-21" width="18" height="3" rx="1.5" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Subtle grid pattern in background -->
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="0.5" fill="white" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="300" height="400" fill="url(#grid)"/>
+  
+  <!-- Connecting lines suggesting data flow -->
+  <path d="M 60,95 Q 100,140 140,170" stroke="white" stroke-width="0.5" opacity="0.3" fill="none" stroke-dasharray="2,3"/>
+  <path d="M 240,100 Q 200,140 160,170" stroke="white" stroke-width="0.5" opacity="0.3" fill="none" stroke-dasharray="2,3"/>
+  <path d="M 50,295 Q 90,250 140,225" stroke="white" stroke-width="0.5" opacity="0.3" fill="none" stroke-dasharray="2,3"/>
+  <path d="M 250,305 Q 210,260 160,230" stroke="white" stroke-width="0.5" opacity="0.3" fill="none" stroke-dasharray="2,3"/>
+</svg>

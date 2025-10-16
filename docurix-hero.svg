@@ -1,0 +1,99 @@
+<svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#1f1f1f"/>
+  
+  <!-- HTML document on the left (input) -->
+  <g transform="translate(50, 120)">
+    <!-- Document outline -->
+    <rect x="0" y="0" width="80" height="100" rx="3" fill="none" stroke="white" stroke-width="2"/>
+    
+    <!-- HTML code lines -->
+    <line x1="10" y1="15" x2="40" y2="15" stroke="white" stroke-width="2" opacity="0.9"/>
+    <line x1="10" y1="25" x2="55" y2="25" stroke="white" stroke-width="2" opacity="0.9"/>
+    <line x1="10" y1="35" x2="35" y2="35" stroke="white" stroke-width="2" opacity="0.9"/>
+    
+    <!-- HTML brackets -->
+    <path d="M 15,50 L 10,55 L 15,60" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+    <path d="M 65,50 L 70,55 L 65,60" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+    
+    <!-- More code lines -->
+    <line x1="10" y1="70" x2="50" y2="70" stroke="white" stroke-width="2" opacity="0.9"/>
+    <line x1="10" y1="80" x2="45" y2="80" stroke="white" stroke-width="2" opacity="0.9"/>
+  </g>
+  
+  <!-- PDF document on the right (output) -->
+  <g transform="translate(170, 120)">
+    <!-- Document outline with folded corner -->
+    <path d="M 0,0 L 80,0 L 80,100 L 0,100 Z" fill="none" stroke="white" stroke-width="2"/>
+    <path d="M 65,0 L 65,15 L 80,15" fill="#1f1f1f" stroke="white" stroke-width="2"/>
+    
+    <!-- PDF content - rendered document appearance -->
+    <rect x="10" y="20" width="60" height="4" rx="1" fill="white" opacity="0.9"/>
+    <rect x="10" y="30" width="50" height="4" rx="1" fill="white" opacity="0.7"/>
+    <rect x="10" y="40" width="55" height="4" rx="1" fill="white" opacity="0.7"/>
+    
+    <!-- Image placeholder -->
+    <rect x="10" y="52" width="25" height="20" rx="2" fill="white" opacity="0.5"/>
+    
+    <!-- More content lines -->
+    <rect x="10" y="78" width="60" height="3" rx="1" fill="white" opacity="0.6"/>
+    <rect x="10" y="85" width="45" height="3" rx="1" fill="white" opacity="0.6"/>
+  </g>
+  
+  <!-- Lightning bolt/speed indicator in the center -->
+  <g transform="translate(150, 170)">
+    <!-- Lightning bolt -->
+    <path d="M 2,-25 L -8,0 L 2,0 L -2,25 L 8,0 L -2,0 Z" fill="white" opacity="0.95"/>
+    
+    <!-- Speed lines -->
+    <line x1="-25" y1="-8" x2="-15" y2="-8" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+    <line x1="-25" y1="0" x2="-12" y2="0" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+    <line x1="-25" y1="8" x2="-15" y2="8" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+    
+    <line x1="15" y1="-8" x2="25" y2="-8" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+    <line x1="12" y1="0" x2="25" y2="0" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+    <line x1="15" y1="8" x2="25" y2="8" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Transformation arrow -->
+  <g transform="translate(90, 170)">
+    <line x1="0" y1="0" x2="45" y2="0" stroke="white" stroke-width="2" opacity="0.4"/>
+    <path d="M 40,-5 L 50,0 L 40,5" fill="white" opacity="0.4"/>
+  </g>
+  
+  <!-- Pixel-perfect grid overlay -->
+  <defs>
+    <pattern id="pixelgrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="none" stroke="white" stroke-width="0.3" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="300" height="400" fill="url(#pixelgrid)"/>
+  
+  <!-- API brackets at bottom corners suggesting developer-friendly -->
+  <g transform="translate(30, 320)">
+    <path d="M 15,0 L 0,8 L 15,16" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="25" cy="8" r="2" fill="white" opacity="0.5"/>
+    <circle cx="35" cy="8" r="2" fill="white" opacity="0.5"/>
+    <circle cx="45" cy="8" r="2" fill="white" opacity="0.5"/>
+  </g>
+  
+  <g transform="translate(255, 320)">
+    <path d="M 0,0 L 15,8 L 0,16" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="-10" cy="8" r="2" fill="white" opacity="0.5"/>
+    <circle cx="-20" cy="8" r="2" fill="white" opacity="0.5"/>
+    <circle cx="-30" cy="8" r="2" fill="white" opacity="0.5"/>
+  </g>
+  
+  <!-- Decorative circuit-like lines suggesting automation -->
+  <circle cx="90" cy="100" r="2.5" fill="white" opacity="0.3"/>
+  <line x1="90" y1="100" x2="90" y2="120" stroke="white" stroke-width="1" opacity="0.25"/>
+  
+  <circle cx="210" cy="100" r="2.5" fill="white" opacity="0.3"/>
+  <line x1="210" y1="100" x2="210" y2="120" stroke="white" stroke-width="1" opacity="0.25"/>
+  
+  <circle cx="90" cy="240" r="2.5" fill="white" opacity="0.3"/>
+  <line x1="90" y1="220" x2="90" y2="240" stroke="white" stroke-width="1" opacity="0.25"/>
+  
+  <circle cx="210" cy="240" r="2.5" fill="white" opacity="0.3"/>
+  <line x1="210" y1="220" x2="210" y2="240" stroke="white" stroke-width="1" opacity="0.25"/>
+</svg>
