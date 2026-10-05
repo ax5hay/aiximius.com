@@ -2,7 +2,7 @@
 
 # aiximius.com
 
-**The Aiximius company site — a hand-built static landing page.**
+**The Aiximius company site: a hand-built static landing page.**
 
 [![Live](https://img.shields.io/badge/live-www.aiximius.com-0b0b0f?style=for-the-badge&logoColor=white)](http://www.aiximius.com)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
@@ -20,7 +20,7 @@ from **GitHub Pages** on the apex domain via `CNAME`. Fast because there is noth
 
 | Piece | File(s) |
 |-------|---------|
-| The page | `index.html` — all markup, styles, and copy |
+| The page | `index.html`: all markup, styles, and copy |
 | Brand & hero art | `logo header.png`, `hero-bg.png`, `final low res.png`, product hero SVGs |
 | Case-study imagery | `case study *.jpeg` (Merakiel, Dixit, Rude, and others) |
 | Domain binding | `CNAME` → `aiximius.com` |
@@ -28,9 +28,9 @@ from **GitHub Pages** on the apex domain via `CNAME`. Fast because there is noth
 
 ## Deploy
 
-Push to the default branch — GitHub Pages serves the root. The `CNAME` file keeps the custom
+Push to the default branch: GitHub Pages serves the root. The `CNAME` file keeps the custom
 domain mapped. To preview locally:
 
 ```bash
-python3 -m http.server 8000   # then open http://localhost:8000
+python3 -m http.server 8000  # then open http://localhost:8000
 ```
